@@ -87,3 +87,9 @@ def guessSingleKeyCaesar(cipher, language="english"):
             break
         currentIndex += 1
     return text
+
+def replaceLetters(letterList, cipher):
+    # needs to skip already checked letters
+    for key, value in letterList:
+        cipher = cipher.replace(key, value)
+    return cipher
